@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Menu</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        height: 2000px;
+    }
+    .nav{
+        list-style-type: none;
+        background-color: #333;
+        top: 0;
+        width: 100%;
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+    }
+    .nav li{
+        display: inline;
+    }
+    .nav li a{
+        text-decoration: none;
+        color: white;
+        padding: 14px 16px;
+        display: inline-block;
+    }
+    .nav li a:hover{
+        background-color: #111;
+    }
+    main{
+        margin-top: 46px;
+        position: relative;
+    }
+    .menu{
+        width: auto;
+        position: fixed;
+        cursor: pointer;
+    }
+    .content{
+        padding: 16px;
+       margin: 0 200px;
+    }   
+    .menu ul{
+        list-style-type: none;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        padding: 10px;
+    }
+    .menu ul li a:hover{
+        background-color: #ccc;
+    }
+    .menu ul li ul{
+        display: none;
+    }
+    .menu ul li:hover{
+        background-color: #ccc;
+    }
+    .menu ul li:hover ul{
+        position: fixed;
+        left: 68px;
+        display: block;
+        background-color: rgb(142, 142, 142);
+        margin-top: -38px;
+    }
+    
+</style>
+<body>
+    <header>
+        <nav class="sticky-menu">
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="menu">
+            <ul>
+                <li><a href="#">Sem 1</a>
+                    <ul>
+                        <li><a href="#">Computing Fundametal</a></li>
+                        <li><a href="#">C Programming</a></li>
+                        <li><a href="#">Building Dynamic Website</a></li>
+                        <li><a href="#">MS Transact-SQL</a></li>
+                        <li><a href="#">Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sem 2 </a>
+                    <ul>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">APJ - I</a></li>
+                        <li><a href="#">APJ - II</a></li>
+                        <li><a href="#">APJ - III</a></li>
+                        <li><a href="#">eProject</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sem 3</a></li>
+                <li><a href="#">Sem 4</a></li>
+            </ul>
+
+        </section>
+        <section class="content">
+            <h1>Fixed Top Menu</h1>
+            <h4>Scroll this page to see the effect</h4>
+            <h4>The navigation bar will stay at the top of the page while scrolling</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eos quis in eum cupiditate, magnam odit laborum voluptates qui natus quaerat sit quam possimus quae aperiam eligendi et nisi similique?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eos quis in eum cupiditate, magnam odit laborum voluptates qui natus quaerat sit quam possimus quae aperiam eligendi et nisi similique?</p>
+        </section>
+    </main>
+</body>
+</html>
