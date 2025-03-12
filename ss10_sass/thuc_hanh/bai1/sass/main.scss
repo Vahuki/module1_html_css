@@ -1,0 +1,7 @@
+@use "./var" as V;
+
+body {
+    background-color: V.$color-primary;
+    font-family: V.$font;
+    font-size: V.$font-size;
+}

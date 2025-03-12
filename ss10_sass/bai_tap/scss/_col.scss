@@ -1,0 +1,26 @@
+@use  "var"  as v;
+
+.col-1{
+    width: calc(100/12);
+    height: 100vh;
+    background-color: #333;
+    border-right: 1px solid #000000;
+}
+.col-2{
+    width: calc(100/12*2);
+    height: 100vh;
+    background-color: #333;
+    border-right: 1px solid #000000;
+}
+.col-3{
+    width: calc(100/12*3);
+    height: 100vh;
+    background-color: #333;
+    border-right: 1px solid #000000;
+}
+.col-4 {
+    width: 25%;
+    height: 100vh;
+    background-color: #333;
+    border-right: 1px solid #000000;
+}

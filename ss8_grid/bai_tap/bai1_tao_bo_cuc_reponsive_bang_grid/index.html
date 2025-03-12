@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "content content"
+                "footer footer";
+            height: 100vh;
+        }
+        .header{
+            grid-area: header;
+            background-color: #333;
+            color: white;   
+            height: 70px;
+            text-align: center;
+            align-content: center;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: #ed5a5a;
+            height: 50px;
+            text-align: center;
+            align-content: center;
+        }
+        .main-content{
+            grid-area:content;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: 
+                "main sidebar";
+        }
+        .main{
+            grid-area: main;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: #a7a7a7;
+            color: white;
+            padding: 10px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: #333; 
+            color: white;
+            height: 50px;
+            text-align: center;
+            align-content: center;
+        }        
+        @media screen and (max-width:420px) {
+            .main-content{
+                grid-area:content;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas: 
+                    "main"
+                    "sidebar";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <nav class="nav">Navigation</nav>
+        <section class="main-content">
+            <main class="main">Nội dung chính</main>
+            <aside class="sidebar">Sidebar</aside>
+        </section>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
